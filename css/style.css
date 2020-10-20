@@ -55,17 +55,19 @@ footer{
 
 @-webkit-keyframes logo_wiggle{
   /*Your code here.*/
-
+  from {width: 25px;}
+  to {width: 420px;}
 }
 
 @keyframes logo_wiggle{
   /*Your code here.*/
-
+  from {width: 25px;}
+  to {width: 420px;}
 } 
 
 #logo{
-   /*Your code here.*/
- 
+   -webkit-animation-duration: logo_wiggle 15s;
+   animation: logo_wiggle 15s;
 }
 
 /* Cards! */
@@ -73,7 +75,10 @@ footer{
     min-height: 500px;
     /*Your code here.*/
     /*Don't forget to vertically and horizontally alight the card*/
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
@@ -83,7 +88,9 @@ footer{
   padding: 0 0 50px 0;
   /*Your code here.*/
   /*Take a look at flex-basis*/
-
+  display: flex;
+  flex-basis: 400px;
+  flex-direction: column;
 }
 
 .card > header{
@@ -129,6 +136,9 @@ footer{
 .gallery{
   min-height: 600px;
   /*Your code here again.*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .gallery > img{
@@ -142,10 +152,17 @@ header{
   background: #fff;
   border-bottom: 3px solid #50C7C7;
   /*Your  code here again.*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .nav_links{
   /*Your code here again.*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
 }
 
 .nav_item a{
@@ -165,6 +182,8 @@ header{
   /* Cards! */
   .card {
     /*Your  code here again.*/
+    display: flex;
+    flex-basis: 225px;
   }
 
   .card_big{
@@ -174,11 +193,16 @@ header{
 
   /* Navbar */
   header{
-    /*Your code here again.*/  
+    /*Your code here again.*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .nav_links{
-    /*Your code here again.*/  
+    /*Your code here again.*/ 
+    display: flex;
+    flex-direction: row;
   }
 
   .nav_item a{
@@ -191,8 +215,29 @@ header{
     flex-basis: 200px;
   }
   /*Your code here again.*/
-  /*You will want four selectors*/  
+  /*You will want four selectors*/
+  body {
+    background-image: none;
+  }
+  .gallery {
+    display: none !important;
+  }
+
+  #gallery {
+    display: none !important;
+  }
+
+  .pricing {
+    display: flex;
+    align-items: stretch;
+  }
+  
 }
 
 /*Your code here again.*/ 
 /*Add media query to handle reduced-motion*/
+@media (prefers-reduced-motion) {
+  #logo {
+    -webkit-animation: none;
+   animation: none;
+  }
