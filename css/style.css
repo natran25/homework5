@@ -66,8 +66,8 @@ footer{
 } 
 
 #logo{
-   -webkit-animation: logo_wiggle 15s;
-   animation: logo_wiggle 15s;
+   -webkit-animation: logo_wiggle 3s;
+   animation: logo_wiggle 3s;
 }
 
 /* Cards! */
